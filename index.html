@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa Học</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style-khoa-hoc.css">
+    <script src="./assets/js/js-khoa-hoc.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="col col-four">
+                <a href="https://www.facebook.com/">
+                    <img src="./assets/images/logo-1.png" alt="" class="logo">
+                </a>
+            </div>
+
+            <div class="col col-two" style="text-align: center;">
+                <ul id="nav">
+                    <li><a href="https://www.facebook.com/">Trang Chủ</a></li>
+
+                    <li><a href="#">Về Chúng Tôi</a></li>
+
+                    <li><a href="#">Khóa Học STM</a></li>
+
+                    <li><a href="#">Khóa Học</a></li>
+
+                    <li><a href="#">Mentor</a></li>
+
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col col-four">
+                <a href="#">
+                    <img src="./assets/images/icon-shopping-cart.jpg" alt="" class="cart">
+                    <span class="number-cart">0</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="title">
+            <div class="text-title">
+                <div class="name-title">Danh sách khóa học</div>
+                <div class="address">
+                    <p>
+                        <a href="https://www.facebook.com/">Trang chủ</a> > Khóa học
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="col col-four left-content">
+                <div class="price-left-content">
+                    <div class="name-search">Khoảng giá</div>
+                    <div class="grey-color">Từ giá</div>
+                    <input id="price-input-1" type="text" placeholder="0 VNĐ" oninput="formatCurrency(this); checkConstraints()" onkeypress="return allowOnlyNumbers(event)" onkeydown="allowDelete(event)">
+                    <div class="grey-color">Đến Giá</div>
+                    <input id="price-input-2" type="text" placeholder="10.000.000 VNĐ" oninput="formatCurrency(this); checkConstraints()" onkeypress="return allowOnlyNumbers(event)" onkeydown="allowDelete(event)">
+                    <div id="notification-price-left-content"></div>
+                </div>
+
+                <div>
+                    <div class="name-search">Hình Thức học</div>
+                    <ul>
+                        <li>
+                    <input type="checkbox" name="" id=""><span class="grey-color">online</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""><span class="grey-color">offline</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="name-search">Trình độ</div>
+                    <ul>
+                        <li>
+                            <div class="level col col-two">
+                                <input type="checkbox" name="" id=""><span class="grey-color">Dễ</span>
+                            </div>
+                            <div class="col col-two">
+                                <img src="./assets/images/icon-title-course.png" alt="" style="height: 70px; ">
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div class="level col col-two">
+                                <input type="checkbox" name="" id=""><span class="grey-color">Trung bình</span>
+                            </div>
+                            <div class="col col-two">
+                                <img src="./assets/images/icon-title-course-2.png" alt="" style="height: 70px; ">
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div class="level col col-two">
+                                <input type="checkbox" name="" id=""><span class="grey-color">Khó</span>
+                            </div>
+                            <div class="col col-two">
+                                <img src="./assets/images/icon-title-course-3.png" alt="" style="height: 70px; ">
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div class="level col col-two">
+                                <input type="checkbox" name="" id=""><span class="grey-color">Cực Khó</span>
+                            </div>
+                            <div class="col col-two">
+                                <img src="./assets/images/icon-title-course-4.png" alt="" style="height: 70px; ">
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="name-search">Lĩnh Vực</div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="" id=""><span class="grey-color">Back-End</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""><span class="grey-color">Front-End</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""><span class="grey-color">Database</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""><span class="grey-color">Cấp tốc</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""><span class="grey-color">Other</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""><span class="grey-color">STEM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <input type="button" value="Tìm Kiếm">
+                </div>
+            </div>
+            <div class="col col-three-quarters right-content">
+                <div class="header-right-content">
+                    <div class="col col-two">
+                        <div id="total-course">33 Khóa học</div>
+                    </div>
+                    <div class="col col-two">
+                        <select name="" id="">
+                            <option value="">Sắp xếp khóa học</option>
+                        </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="product">
+                    <div class="card-product col col-three">
+                        <div class="card-cover">
+                            <div class="cover-img-card-product">
+                                <img src="./assets/images/reactjs-expert.jpg" alt="" >
+                            </div>
+                            <div class="avt-card-product">
+                                <img src="./assets/images/avatar-mentor-1.jpg" alt="" >
+                            </div>
+                            
+
+                            <div class="body-card-product">
+                                <div class="level-card-product">
+                                    <img src="./assets/images/icon-title-course.png" alt="" >
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="name-card-product">.NET Core API</div>
+                                <div class="name-mentor-card-product">Mentor: <span>Trần Hòa Hiệp</span></div>
+                                <div class="number-of-member-card-product"><i class="fa-solid fa-user"></i> <span>104 học viên</span></div>
+                                <div class="content-card-product">ASP.NET Core là mô hình lập trình mới có thể triển khai trên đám mây và có mục đích sử
+                                    dụng chạy nhiều nền tảng như: MacOs, Linux và Windows. Nó hỗ trợ được ASP.NET MVC,
+                                    ASP.NET Core Web API, backend mobile nó còn là một mã nguồn mở.</div>
+                                <div class="rating-card-product">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <!-- <i class="fa-regular fa-star"></i> -->
+                                </div>
+                                <div>
+                                    <div class="price-card-product col col-two">3,000,000 VNĐ</div>
+                                    <div class="session-card-product col col-two">
+                                        <i class="fa-solid fa-calendar-days"></i> 15 buổi học
+                                    </div>
+                                    
+                                    <div class="clear"></div>
+                                </div>
+                                <hr>
+                                <div class="bt-card-project">
+                                    <input type="button" value="XEM CHI TIẾT">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-product col col-three">
+                        <div class="card-cover">
+                            <div class="cover-img-card-product">
+                                <img src="./assets/images/reactjs-expert.jpg" alt="" >
+                            </div>
+                            <div class="avt-card-product">
+                                <img src="./assets/images/avatar-mentor-1.jpg" alt="" >
+                            </div>
+                            
+
+                            <div class="body-card-product">
+                                <div class="level-card-product">
+                                    <img src="./assets/images/icon-title-course.png" alt="" >
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="name-card-product">.NET Core API</div>
+                                <div class="name-mentor-card-product">Mentor: <span>Trần Hòa Hiệp</span></div>
+                                <div class="number-of-member-card-product"><i class="fa-solid fa-user"></i> <span>104 học viên</span></div>
+                                <div class="content-card-product">ASP.NET Core là mô hình lập trình mới có thể triển khai trên đám mây và có mục đích sử
+                                    dụng chạy nhiều nền tảng như: MacOs, Linux và Windows. Nó hỗ trợ được ASP.NET MVC,
+                                    ASP.NET Core Web API, backend mobile nó còn là một mã nguồn mở.</div>
+                                <div class="rating-card-product">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <!-- <i class="fa-regular fa-star"></i> -->
+                                </div>
+                                <div>
+                                    <div class="price-card-product col col-two">3,000,000 VNĐ</div>
+                                    <div class="session-card-product col col-two">
+                                        <i class="fa-solid fa-calendar-days"></i> 15 buổi học
+                                    </div>
+                                    
+                                    <div class="clear"></div>
+                                </div>
+                                <hr>
+                                <div class="bt-card-project">
+                                    <input type="button" value="XEM CHI TIẾT">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-product col col-three">
+                        <div class="card-cover">
+                            <div class="cover-img-card-product">
+                                <img src="./assets/images/reactjs-expert.jpg" alt="" >
+                            </div>
+                            <div class="avt-card-product">
+                                <img src="./assets/images/avatar-mentor-1.jpg" alt="" >
+                            </div>
+                            
+
+                            <div class="body-card-product">
+                                <div class="level-card-product">
+                                    <img src="./assets/images/icon-title-course.png" alt="" >
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="name-card-product">.NET Core API</div>
+                                <div class="name-mentor-card-product">Mentor: <span>Trần Hòa Hiệp</span></div>
+                                <div class="number-of-member-card-product"><i class="fa-solid fa-user"></i> <span>104 học viên</span></div>
+                                <div class="content-card-product">ASP.NET Core là mô hình lập trình mới có thể triển khai trên đám mây và có mục đích sử
+                                    dụng chạy nhiều nền tảng như: MacOs, Linux và Windows. Nó hỗ trợ được ASP.NET MVC,
+                                    ASP.NET Core Web API, backend mobile nó còn là một mã nguồn mở.</div>
+                                <div class="rating-card-product">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <!-- <i class="fa-regular fa-star"></i> -->
+                                </div>
+                                <div>
+                                    <div class="price-card-product col col-two">3,000,000 VNĐ</div>
+                                    <div class="session-card-product col col-two">
+                                        <i class="fa-solid fa-calendar-days"></i> 15 buổi học
+                                    </div>
+                                    
+                                    <div class="clear"></div>
+                                </div>
+                                <hr>
+                                <div class="bt-card-project">
+                                    <input type="button" value="XEM CHI TIẾT">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-product col col-three">
+                        <div class="card-cover">
+                            <div class="cover-img-card-product">
+                                <img src="./assets/images/reactjs-expert.jpg" alt="" >
+                            </div>
+                            <div class="avt-card-product">
+                                <img src="./assets/images/avatar-mentor-1.jpg" alt="" >
+                            </div>
+                            
+
+                            <div class="body-card-product">
+                                <div class="level-card-product">
+                                    <img src="./assets/images/icon-title-course.png" alt="" >
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="name-card-product">.NET Core API</div>
+                                <div class="name-mentor-card-product">Mentor: <span>Trần Hòa Hiệp</span></div>
+                                <div class="number-of-member-card-product"><i class="fa-solid fa-user"></i> <span>104 học viên</span></div>
+                                <div class="content-card-product">ASP.NET Core là mô hình lập trình mới có thể triển khai trên đám mây và có mục đích sử
+                                    dụng chạy nhiều nền tảng như: MacOs, Linux và Windows. Nó hỗ trợ được ASP.NET MVC,
+                                    ASP.NET Core Web API, backend mobile nó còn là một mã nguồn mở.</div>
+                                <div class="rating-card-product">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <!-- <i class="fa-regular fa-star"></i> -->
+                                </div>
+                                <div>
+                                    <div class="price-card-product col col-two">3,000,000 VNĐ</div>
+                                    <div class="session-card-product col col-two">
+                                        <i class="fa-solid fa-calendar-days"></i> 15 buổi học
+                                    </div>
+                                    
+                                    <div class="clear"></div>
+                                </div>
+                                <hr>
+                                <div class="bt-card-project">
+                                    <input type="button" value="XEM CHI TIẾT">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="page-navigation">
+                    <ul class="next-page-navigation">
+                        <li class="bg-color-orange"><a href="#" class="white-color">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="footer">
+            <div class="distributed-footer">
+                <div class="col col-three">
+                    <div class="logo-footer">
+                        <a href="">
+                            <img src="./assets/images/logo-1.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        Chúng tôi cung cấp các khóa học chất lượng cao để cải thiện các kỹ năng lập trình của bạn. Tất cả các mentor của chúng tôi đều có nhiều kinh nghiệm trong thực tế và giảng dạy.
+                    </div>
+                    <div>Theo dõi chúng tôi tại:</div>
+                    <div>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col col-three">
+                    <div class="col col-two">
+                        <div class="title-footer">Menu</div>
+                        <div><a href="">Trang chủ</a></div>
+                        <div><a href="">Về chúng tôi</a></div>
+                        <div><a href="">Nền tảng LMS</a></div>
+                        <div><a href="">Khóa học STEM</a></div>
+                        <div><a href="">Khóa học</a></div>
+                        <div><a href="">Mentor</a></div>
+                        <div><a href="">Blog</a></div>
+                    </div>
+                    <div class="col col-two">
+                        <div class="title-footer">Điều khoản</div>
+                        <div><a href="">Chính sách bảo mật</a></div>
+                        <div><a href="">Điều khoản dịch vụ</a></div>
+                        <div class="title-footer">Cộng tác viên</div>
+                        <div><a href="">Đăng ký Cộng tác viên</a></div>
+                        <div><a href="">Đăng ký Mentor</a></div>
+                    </div>
+                </div>
+                <div class="col col-three">
+                    <div class="title-footer">Liên hệ với chúng tôi</div>
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i><span>9ABC, XYZ</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope-open-text"></i><span>hi@acb.com</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-phone-volume"></i><span>131312312</span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+
+</html>
